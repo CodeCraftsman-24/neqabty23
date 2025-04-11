@@ -1,0 +1,19 @@
+name = "neqabty-attendance-system"
+compatibility_date = "2025-04-11"
+compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = ".next/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "attendance_db"
+database_id = "local"
+
+[env.production]
+d1_databases = [
+  { binding = "DB", database_name = "attendance_db", database_id = "local" }
+]

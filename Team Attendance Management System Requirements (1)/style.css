@@ -1,0 +1,101 @@
+/* Main stylesheet for Team Attendance System */
+
+/* Custom variables */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+/* Custom styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  font-weight: 500;
+}
+
+.shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Animation for status changes */
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Location status styles */
+.location-success {
+  color: var(--success-color);
+}
+
+.location-error {
+  color: var(--danger-color);
+}
+
+/* Report filters section */
+.report-filters {
+  background-color: var(--light-color);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Export button styling */
+.btn-export {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Status badges */
+.status-badge {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 50rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  background-color: var(--light-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
